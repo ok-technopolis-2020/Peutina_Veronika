@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title> One </title>
+</head>
+<style>
+  li {
+    list-style-type: none;
+    }
+    ul {
+      margin-left: 0;
+   		padding-left: 0;
+  	}
+</style>
+<body>
+	<h1> todos </h1>
+	<div id="main" >
+		<div class="add">
+			<input type="button" aria-label="select all">
+			<input type="text" name="new_todo" placeholder="What needs to be done?">
+		</div>
+		<ul>
+			<li>
+				<input type="checkbox">
+				<label contenteditable="true">HTML</label>
+				<button>x</button>  
+			</li>
+			<li>
+				<input type="checkbox">
+				<label contenteditable="true"> CSS </label>
+				<button>x</button>  
+			</li>
+			<li>
+				<input type="checkbox">
+				<label contenteditable="true"> JS </label>
+				<button>x</button>  
+			</li>
+			<li>
+				<input type="checkbox">
+				<label contenteditable="true"> JS tools </label>
+				<button>x</button>  
+			</li>
+		</ul>
+		<div>
+			<div> 3 items left </div>
+			<div>
+				<input type="radio"><label>All</label>
+				<input type="radio"><label>Active</label>
+				<input type="radio"><label>Completed</label>
+			</div>
+			<div class="number_completed"><button>Clear completed</button></div>
+		</div>
+	</div>
+</body>
+</html>
