@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>todo</title>
+</head>
+<style>
+  li {
+    list-style-type: none;
+    }
+    ul {
+      margin-left: 0;
+   		padding-left: 0;
+  	}
+</style>
+<body>
+	<h1> todos </h1>
+		<div class="add">
+			<button aria-label="select all">></button>
+			<input type="text" name="new_todo" placeholder="What needs to be done?" aria-label="add task">
+		</div>
+		<ul>
+			<li>
+				<input type="checkbox" aria-label="completed task">
+				<label contenteditable="true">HTML</label>
+				<button aria-label="remove task">x</button>  
+			</li>
+			<li>
+				<input type="checkbox"  aria-label="completed task">
+				<label contenteditable="true"> CSS </label>
+				<button aria-label="remove task">x</button>  
+			</li>
+			<li>
+				<input type="checkbox"  aria-label="completed task">
+				<label contenteditable="true"> JS </label>
+				<button aria-label="remove task">x</button>  
+			</li>
+			<li>
+				<input type="checkbox"  aria-label="completed task">
+				<label contenteditable = "true"> JS tools </label>
+				<button aria-label="remove task">x</button>  
+			</li>
+		</ul>
+		<div>
+			<div> 3 items left </div>
+			<div>
+				<input type="radio" aria-label="all tasks"><label>All</label>
+				<input type="radio" aria-label="active tasks"><label>Active</label>
+				<input type="radio" aria-label="completed tasks"><label>Completed</label>
+			</div>
+			<div class="number_completed"><button aria-label="clear completed tasks">Clear completed</button></div>
+		</div>
+	</div>
+</body>
+</html>
