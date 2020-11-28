@@ -1,0 +1,270 @@
+body {
+    font: 16px Montserrat, sans-serif;
+    text-align: center;
+    background: #F2F2F2;
+    min-width: 800px;
+    min-height: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline-color: rgba(0, 0, 0, 0.2);
+}
+
+.page {
+    height: content-box;
+    color: #CCCCCC;
+    margin: 0 auto;
+}
+
+.name-todos {
+    font-size: 60px;
+    margin: 4% 0 0;
+}
+
+.todo-page {
+    height: 370px;
+    width: 800px;
+    margin: 0 auto;
+    color: #CCCCCC;
+    background: #FFFFFF;
+    position: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+}
+
+.add {
+    height: 60px;
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    min-width: 400px;
+    border: #E6E6E6 solid 1px;
+    flex: 0 0 auto;
+}
+
+.button-select-all {
+    float: left;
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    padding: 0;
+    border: #FFFFFF;
+    background: #FFFFFF;
+    font-size: x-large;
+    color: #666666;
+    cursor: pointer;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    flex: 0 0 auto;
+}
+
+.input-text {
+    width: 740px;
+    height: 60px;
+    float: left;
+    border: #666666;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.input-text::placeholder {
+    color: #CCCCCC;
+}
+
+.task {
+    height: 60px;
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    min-width: 400px;
+    border: #E6E6E6 solid 1px;
+}
+
+.checkbox-task {
+    float: left;
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.label-task {
+    cursor: pointer;
+    float: left;
+    background-image: url("../icons/circle-40.svg");
+    height: 55px;
+    width: 55px;
+    margin: 5px 0 0 5px;
+    padding: 0;
+    font-size: large;
+    vertical-align: middle;
+}
+
+.label-task:before {
+    content: " ";
+    opacity: 0;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    height: 55px;
+    width: 55px;
+    background: #FFF;
+    border-image: initial;
+    vertical-align: middle;
+}
+
+input:focus + .label-task:before {
+    background-image: url("../icons/checked-40.svg");
+    opacity: 30%;
+}
+
+input:checked + .label-task:before {
+    opacity: 100%;
+    background-image: url("../icons/checked-40.svg");
+}
+
+
+
+.text-task {
+    text-align: left;
+    width: 670px;
+    height: 45px;
+    float: left;
+    border: rgb(102, 102, 102);
+    padding: 15px 0 0 10px;
+    margin: 0;
+    font-size: x-large;
+    align-items: center;
+    color: #666666;
+}
+
+.remove-task-button {
+    text-align: left;
+    width: 60px;
+    height: 60px;
+    border: #666666;
+    margin: 0;
+    padding: 14px;
+    font-size: large;
+    background: #FFFFFF;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.task:hover .remove-task-button {
+    opacity: 100%;
+    background: #FAFAFA;
+}
+
+.task:hover {
+    background: #FAFAFA;
+}
+
+.remove-task-button:focus {
+    opacity: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    align-items: center;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+}
+
+.radio-filter {
+    height: 60px;
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    min-width: 400px;
+    border: #E6E6E6 solid 1px;
+    flex: 0 0 auto;
+}
+.radio-text {
+    float: left;
+    margin: 15px 0 0 20px;
+}
+.radio {
+    float: left;
+    height: 60px;
+    width: 500px;
+    top: 10px;
+    left: 0;
+}
+.input-radio {
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
+}
+.label-radio {
+    margin: 15px;
+}
+.input-radio + .label-radio {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 5px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    user-select: none;
+}
+.input-radio:checked:focus + .label-radio {
+    border: 1px solid #bababa;
+}
+
+.input-radio:checked + .label-radio {
+    border: 1px solid #CCCCCC;
+}
+
+.input-radio:hover, .input-radio:focus + .label-radio {
+    cursor: pointer;
+    border-radius: 2px;
+    border: 1px solid #CCCCCC;
+}
+
+
+.number-completed {
+    margin: 15px 0 0 0;
+    float: left;
+    width: 170px;
+    height: 60px;
+}
+
+.completed-button {
+    font: 16px Montserrat, sans-serif;
+    color: #CCCCCC;
+    background-color: #FFFFFF;
+    border: 0;
+    font-size: large;
+}
+
+.completed-button:hover {
+    cursor: pointer;
+    border-radius: 2px;
+    border: 1px solid #CCCCCC;
+}
+
+.completed-button:focus {
+    border-radius: 2px;
+    border: 1px solid #CCCCCC;
+}
+
