@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>todo</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Styles/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>todo</title>
 </head>
-<style>
-  li {
-    list-style-type: none;
-    }
-    ul {
-      margin-left: 0;
-   		padding-left: 0;
-  	}
-</style>
 <body>
-	<h1> todos </h1>
-		<div class="add">
-			<button aria-label="select all">></button>
-			<input type="text" name="new_todo" placeholder="What needs to be done?" aria-label="add task">
-		</div>
-		<ul>
-			<li>
-				<input type="checkbox" aria-label="completed task">
-				<label contenteditable="true">HTML</label>
-				<button aria-label="remove task">x</button>  
-			</li>
-			<li>
-				<input type="checkbox"  aria-label="completed task">
-				<label contenteditable="true"> CSS </label>
-				<button aria-label="remove task">x</button>  
-			</li>
-			<li>
-				<input type="checkbox"  aria-label="completed task">
-				<label contenteditable="true"> JS </label>
-				<button aria-label="remove task">x</button>  
-			</li>
-			<li>
-				<input type="checkbox"  aria-label="completed task">
-				<label contenteditable = "true"> JS tools </label>
-				<button aria-label="remove task">x</button>  
-			</li>
-		</ul>
-		<div>
-			<div> 3 items left </div>
-			<div>
-				<input type="radio" aria-label="all tasks"><label>All</label>
-				<input type="radio" aria-label="active tasks"><label>Active</label>
-				<input type="radio" aria-label="completed tasks"><label>Completed</label>
-			</div>
-			<div class="number_completed"><button aria-label="clear completed tasks">Clear completed</button></div>
-		</div>
-	</div>
+<div class="page">
+    <h1 class="name-todos"> todos </h1>
+    <div class="todo-page">
+        <div class="add">
+            <button class="button-select-all" aria-label="select all">V</button>
+            <input type="text" class="input-text" placeholder="What needs to be done?" aria-label="add task"
+                   autofocus="autofocus">
+        </div>
+        <div class="list">
+            <ul>
+                <li class="task">
+                    <input type="checkbox" class="checkbox-task" id="checkbox-1" aria-label="completed task">
+                    <label class="label-task" for="checkbox-1"> </label>
+                    <span class="text-task">HTML</span>
+                    <button class="remove-task-button" aria-label="remove task"><img src="icons/delete.svg"
+                                                                                     alt="remove task"></button>
+                </li>
+                <li class="task">
+                    <input type="checkbox" class="checkbox-task" id="checkbox-2" aria-label="completed task">
+                    <label class="label-task" for="checkbox-2"> </label>
+                    <span class="text-task">CSS</span>
+                    <button class="remove-task-button" aria-label="remove task"><img src="icons/delete.svg"
+                                                                                     alt="remove task"></button>
+                </li>
+                <li class="task">
+                    <input type="checkbox" class="checkbox-task" id="checkbox-3" aria-label="completed task">
+                    <label class="label-task" for="checkbox-3"> </label>
+                    <span class="text-task">JS</span>
+                    <button class="remove-task-button" aria-label="remove task"><img src="icons/delete.svg"
+                                                                                     alt="remove task"></button>
+                </li>
+                <li class="task">
+                    <input type="checkbox" class="checkbox-task" id="checkbox-4" aria-label="completed task">
+                    <label class="label-task" for="checkbox-4"> </label>
+                    <span class="text-task">JS tools</span>
+                    <button class="remove-task-button" aria-label="remove task"><img src="icons/delete.svg"
+                                                                                     alt="remove task"></button>
+                </li>
+            </ul>
+        </div>
+        <footer class="radio-filter">
+            <span class="radio-text"> 3 items left </span>
+            <span class="radio">
+                    <input type="radio" class="input-radio" aria-label="all tasks" name="filter" id="radio-all">
+                    <label class="label-radio" for="radio-all">All</label>
+                    <input type="radio" class="input-radio" aria-label="active tasks" name="filter" id="radio-active">
+                    <label class="label-radio" for="radio-active">Active</label>
+                    <input type="radio" class="input-radio" aria-label="completed tasks" name="filter" id="radio-completed">
+                    <label class="label-radio" for="radio-completed">Completed</label>
+                </span>
+            <span class="number-completed"><button class="completed-button" aria-label="clear completed tasks">Clear completed</button></span>
+        </footer>
+    </div>
+</div>
 </body>
 </html>
